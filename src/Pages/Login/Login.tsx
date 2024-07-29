@@ -16,8 +16,8 @@ const Login: FC<ILogin> = ({ setAuth }) => {
   const handleDis = useCallback(
     (log?: string, pass?: string) => {
       if (log?.length && pass?.length) {
-        return setDisabled((prev) => (prev = false));
-      } else return setDisabled((prev) => (prev = true));
+        return setDisabled(false);
+      } else return setDisabled(true);
     },
     [setDisabled]
   );
