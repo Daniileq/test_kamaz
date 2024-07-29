@@ -1,0 +1,8 @@
+.layout_container {
+  padding: 40px 40px 40px 40px;
+}
+.container_valute {
+  display: flex;
+  gap: 9%;
+}
+
