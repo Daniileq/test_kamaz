@@ -6,4 +6,3 @@
 # запуск проекта
 
 - npm run dev
-- npm i
