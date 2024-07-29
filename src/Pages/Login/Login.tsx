@@ -5,7 +5,7 @@ import cn from './login.module.css';
 import { useNavigate } from 'react-router-dom';
 
 interface ILogin {
-  setAuth?: any;
+  setAuth: (authData: boolean) => void;
 }
 
 const Login: FC<ILogin> = ({ setAuth }) => {
@@ -23,7 +23,7 @@ const Login: FC<ILogin> = ({ setAuth }) => {
   );
 
   const handleLogin = useCallback(
-    async (e: React.ChangeEvent<HTMLInputElement>) => {
+    (e: React.ChangeEvent<HTMLInputElement>) => {
       SetLogin(e.target.value);
       handleDis(e.target.value, password);
     },
