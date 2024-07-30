@@ -29,8 +29,8 @@ const BitCoins: FC<IBitcoin> = ({ setAuth }) => {
         <Header setAuth={setAuth} nowDate={nowDate} />
       )}
       <div className={style.container_valute}>
-        {valute?.map((VAL) => (
-          <div key={data?.bpi?.[VAL]?.symbol}>
+        {valute?.map((VAL, i) => (
+          <div key={i}>
             <div>{data?.bpi?.[VAL]?.code}</div>
             <div>{data?.bpi?.[VAL]?.description}</div>
             <div>{data?.bpi?.[VAL]?.rate}</div>
