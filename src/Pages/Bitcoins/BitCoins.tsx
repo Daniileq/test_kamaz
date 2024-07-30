@@ -25,7 +25,9 @@ const BitCoins: FC<IBitcoin> = ({ setAuth }) => {
 
   return (
     <div className={style.layout_container}>
-      {nowDate && <Header setAuth={setAuth} nowDate={nowDate} />}
+      {nowDate !== 'Invalid Date' && (
+        <Header setAuth={setAuth} nowDate={nowDate} />
+      )}
       <div className={style.container_valute}>
         {valute?.map((VAL) => (
           <div key={data?.bpi?.[VAL]?.symbol}>

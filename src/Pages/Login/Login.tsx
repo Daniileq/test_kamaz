@@ -24,8 +24,9 @@ const Login: FC<ILogin> = ({ setAuth }) => {
 
   const handleLogin = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
-      SetLogin(e.target.value);
-      handleDis(e.target.value, password);
+      let val = e.target.value.trim();
+      SetLogin(val);
+      handleDis(val, password);
     },
 
     [SetLogin, handleDis, password]
@@ -33,8 +34,9 @@ const Login: FC<ILogin> = ({ setAuth }) => {
 
   const handlePassword = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
-      SetPassword(e.target.value);
-      handleDis(login, e.target.value);
+      let val = e.target.value.trim();
+      SetPassword(val);
+      handleDis(login, val);
     },
     [SetPassword, handleDis, login]
   );
